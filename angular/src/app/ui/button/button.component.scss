@@ -1,0 +1,28 @@
+@import "~sass/colors";
+
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.5em 1em;
+  color: white;
+  font-size: 1em;
+  line-height: 1;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background-color: $color-1;
+
+  &:hover, &:focus {
+    background-color: $color-1Z;
+  }
+
+  &:active {
+    background-color: $color-1A;
+  }
+
+  &__spinner, &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

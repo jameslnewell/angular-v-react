@@ -1,0 +1,64 @@
+@import "~sass/colors";
+
+.logo {
+  height: 1em;
+  vertical-align: middle
+}
+
+.search {
+
+  &__query {
+    display: block;
+    margin: 1em 0;
+  }
+
+  &__action {
+    margin: 1em 0;
+  }
+
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table-head__cell, .results-table-body__cell {
+  padding: 0.25em;
+}
+
+.results-table-head__cell--repo, .results-table-body__cell--repo {
+  text-align: left;
+}
+
+.results-table-head__cell--star, .results-table-body__cell--star {
+  font-size: 1.1em;
+  text-align: right;
+}
+
+.results-table-head__row {
+  border-bottom: 2px solid #ccc;
+}
+
+.results-table-body__row {
+  border-bottom: 1px dotted hsl(hue($color-2), saturation($color-2), 90%);
+
+  &:nth-child(even) {
+    background-color: hsl(hue($color-2), saturation($color-2), 99%);
+  }
+
+  &:hover {
+    background-color: hsl(hue($color-2), saturation($color-2), 95%);
+  }
+
+}
+
+a {
+  color: $color-1;
+  &:hover, &:focus {
+    color: darken($color-1, 10%);
+  }
+  &:active {
+    color: darken($color-1, 20%);
+  }
+}

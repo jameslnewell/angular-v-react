@@ -1,0 +1,8 @@
+<button class="button" (click)="handleClick($event)" [disabled]="isLoading">
+  <span class="button__spinner" *ngIf="isLoading">
+    <company-spinner></company-spinner>
+  </span>
+  <span class="button__content" *ngIf="!isLoading">
+    <ng-content></ng-content>
+  </span>
+</button>

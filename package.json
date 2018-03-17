@@ -1,0 +1,7 @@
+{
+  "name": "angular-vs-react",
+  "private": true,
+  "dependencies": {
+    "gh-pages": "^1.1.0"
+  }
+}

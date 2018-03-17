@@ -1,0 +1,30 @@
+
+
+$color-white: #fff;
+$color-black: #000;
+
+// @see https://coolors.co/app/6547ff-8563ff-4ff2c1-77ffb2-f2f473
+
+// TODO: come up with a better naming scheme and automate its creation
+
+$color-1: #6547FF;
+$color-1Z: lighten($color-1, 5%);
+$color-1A: darken($color-1, 5%);
+
+$color-2: #8563FF;
+$color-2Z: lighten($color-2, percentage(1*5/100));
+$color-2Y: lighten($color-2, percentage(2*5/100));
+$color-2X: lighten($color-2, percentage(3*5/100));
+$color-2W: lighten($color-2, percentage(4*5/100));
+$color-2V: lighten($color-2, percentage(5*5/100));
+$color-2U: lighten($color-2, percentage(6*5/100));
+$color-2T: lighten($color-2, percentage(7*5/100));
+$color-2S: lighten($color-2, percentage(8*5/100));
+$color-2R: lighten($color-2, percentage(9*5/100));
+$color-2Q: lighten($color-2, percentage(10*5/100));
+
+$color-3: #4FF2C1;
+
+$color-4: #77FFB2;
+
+$color-5: #F2F473;

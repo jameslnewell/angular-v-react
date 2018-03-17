@@ -1,0 +1,47 @@
+<div>
+  <company-heading>
+    Github Stars ✨
+  </company-heading>
+  <main>
+
+    <form>
+      <company-box mt="1">
+        <company-box width="max" mr="0.5">
+          <company-input #input (change)="handleChange($event)" placeholder="Github user e.g. jameslnewell"></company-input>
+        </company-box>
+        <company-box width="min">
+          <company-button (click)="handleLoad()" [isLoading]="isLoading">
+            Load
+          </company-button>
+        </company-box>
+      </company-box>
+      <company-box *ngIf="message" mt="0.5" mb="1">
+        <Company-Alert [type]="message.type">
+          {{message.content}}
+        </Company-Alert>
+      </company-box>
+    </form>
+
+    <div *ngIf="repos && repos.length > 0">
+      <table class="results-table">
+        <thead class="results-table-head">
+          <tr class="results-table-head__row">
+            <th class="results-table-head__cell results-table-head__cell--repo">Repository</th>
+            <th class="results-table-head__cell results-table-head__cell--star">⭐️</th>
+          </tr>
+        </thead>
+        <tbody class="results-table-body">
+          <tr class="results-table-body__row" *ngFor="let repo of repos" title="View on Github...">
+            <td class="results-table-body__cell results-table-body__cell--repo">
+              <a href="{{repo.href}}" target="github">{{repo.name}}</a>
+            </td>
+            <td class="results-table-body__cell results-table-body__cell--star">
+              {{repo.stars}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+</div>
